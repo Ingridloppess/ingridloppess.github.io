@@ -1,0 +1,642 @@
+/* Configuração básica e reset */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; 
+    color: #333; 
+}
+
+/* Centralização do Conteúdo (Container) */
+.container {
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+/* ========================================= */
+/* HEADER GRANDE (HERO SECTION) COM IMAGEM E PARALLAX */
+/* ========================================= */
+header {
+    min-height: 90vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+
+    /* Estilo de Fundo (mantido com Parallax) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('IMG_2620.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    
+    color: #ffffff; 
+    padding: 15px 0; 
+    border-bottom: none; 
+    margin-bottom: 0; 
+    text-align: left;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.portfolio-title {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px; 
+}
+
+.portfolio-title h1 {
+    font-size: 3.5em; 
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); 
+}
+
+.main-nav {
+    display: flex;
+    flex-grow: 1; 
+    justify-content: center; 
+    padding: 0 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #ffffff; 
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s;
+    white-space: nowrap; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+}
+
+.main-nav a:hover {
+    color: #007bff; 
+}
+
+.language-switcher {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+.language-switcher a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 0.9em;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+}
+.language-switcher a:hover {
+    color: #007bff;
+}
+.language-switcher a.active {
+    color: #007bff; 
+    font-weight: 700;
+}
+
+
+/* ========================================= */
+/* SEÇÃO SOBRE MIM (LAYOUT: FOTO AO LADO + EXPERIÊNCIA) */
+/* ========================================= */
+.about-section {
+    display: flex; 
+    gap: 40px; 
+    margin-top: 40px;
+    align-items: flex-start; 
+}
+
+.about-left {
+    flex: 0 0 250px; 
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto; 
+    display: block;
+    border: 3px solid #ccc; 
+}
+
+.contact-info {
+    text-align: left; 
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #444;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* SEÇÃO SKILLS */
+.skills-section {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.skills-section h3 {
+    font-size: 1.1em;
+    color: #111;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff; 
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.skills-icones {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px 10px; 
+}
+
+.skill-item {
+    text-align: center;
+    width: 70px; 
+}
+
+.skill-item img {
+    width: 40px; 
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 5px;
+    transition: transform 0.2s;
+}
+
+.skill-item img:hover {
+    transform: scale(1.1);
+}
+
+.skill-item p {
+    font-size: 0.75em;
+    color: #555;
+    margin: 0;
+    line-height: 1.2;
+}
+
+
+.about-right {
+    flex-grow: 1; 
+}
+
+/* Estilos de H2 e Títulos (Padronizado) */
+h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 50px; 
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff; 
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #111;
+}
+
+/* Ajuste o h2 dentro de about-right */
+.about-right h2 {
+    margin-top: 0; 
+    margin-bottom: 25px;
+}
+
+.about-right p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* ========================================= */
+/* SEÇÃO: EXPERIÊNCIA PROFISSIONAL */
+/* ========================================= */
+.professional-experience {
+    margin-top: 50px; 
+}
+
+.professional-experience h2 {
+    margin-top: 0; 
+    margin-bottom: 25px;
+}
+
+.experience-item {
+    margin-bottom: 30px; 
+    position: relative;
+    padding-left: 25px; 
+}
+
+.experience-item::before {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    top: 5px; 
+    width: 10px;
+    height: 10px;
+    background-color: #007bff; 
+    border-radius: 50%;
+    border: 2px solid #fff; 
+    box-shadow: 0 0 0 2px #007bff; 
+}
+
+.experience-item h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.15em;
+    color: #111;
+}
+
+.experience-item .company-period {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.experience-item ul {
+    list-style: none; 
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.experience-item ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px; 
+    color: #444;
+}
+
+.experience-item ul li::before {
+    content: '—'; 
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-weight: bold;
+}
+
+
+/* ========================================= */
+/* ESTILOS DE CARD (GRID) E PROJETOS */
+/* ========================================= */
+.grid-projetos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px; 
+    margin-top: 20px;
+}
+
+#projetos h2 {
+    grid-column: 1 / -1; 
+}
+
+.projeto-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.imagem-projeto {
+    width: 100%; 
+    height: 220px; 
+    object-fit: cover; 
+    border-bottom: 1px solid #eee;
+}
+
+.card-conteudo {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto-card h3 {
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.descricao {
+    color: #555;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.links {
+    margin-top: 15px;
+}
+
+.links a {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-right: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.link-site {
+    background-color: #007bff; 
+    color: white;
+}
+
+.link-site:hover {
+    background-color: #0056b3;
+}
+
+.link-repo {
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: transparent;
+}
+
+.link-repo:hover {
+    background-color: #f0f0f0;
+}
+
+.tools-usadas {
+    border-top: 1px solid #eee; 
+    padding-top: 15px;
+    margin-top: auto; 
+}
+
+.tools-usadas h4 {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase; 
+}
+
+.icones img {
+    width: 30px; 
+    height: 30px;
+    margin-right: 8px; 
+    transition: transform 0.2s; 
+}
+
+.icones img:hover {
+    transform: scale(1.1); 
+}
+
+/* ========================================= */
+/* SEÇÃO CERTIFICAÇÕES */
+/* ========================================= */
+#certificacoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px; 
+}
+
+#certificacoes h2 {
+    grid-column: 1 / -1; 
+}
+
+.certificado-item {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fcfcfc;
+    height: 100%; 
+    box-sizing: border-box; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03); 
+    transition: transform 0.2s;
+}
+
+.certificado-item:hover {
+    transform: translateY(-3px);
+}
+
+.certificado-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    margin-top: 5px;
+    flex-shrink: 0; 
+}
+
+.certificado-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+    color: #111;
+}
+
+.certificado-info p {
+    margin: 0 0 10px 0;
+    color: #555;
+    font-style: italic;
+}
+
+.certificado-info a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+/* ========================================= */
+/* SEÇÃO RECOMENDAÇÕES */
+/* ========================================= */
+.recomendacao-item {
+    background-color: #f9f9f9;
+    border-left: 5px solid #007bff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0 5px 5px 0;
+}
+
+.recomendacao-item p {
+    margin: 0 0 15px 0;
+    font-style: italic;
+    font-size: 1.05em;
+    color: #333;
+}
+
+.recomendacao-item footer {
+    text-align: right;
+    font-style: normal;
+}
+
+.recomendacao-item footer strong {
+    display: block;
+    color: #111;
+}
+
+.recomendacao-item footer cite {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* ========================================= */
+/* RODAPÉ (com Ícones) */
+/* ========================================= */
+footer {
+    text-align: center;
+    border-top: 2px solid #eee; 
+    padding-top: 30px;
+    margin-top: 60px;
+    padding-bottom: 40px;
+}
+
+.links-sociais {
+    /* Base para evitar que estilos antigos afetem os novos ícones */
+    margin: 0;
+}
+
+/* Novo estilo para a lista de ícones */
+.links-sociais.icon-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os ícones */
+    margin-top: 25px;
+}
+
+.links-sociais.icon-links a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0; 
+}
+
+.links-sociais.icon-links img {
+    width: 40px; /* Tamanho do ícone */
+    height: 40px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.links-sociais.icon-links img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* ========================================= */
+/* RESPONSIVIDADE (MOBILE) */
+/* ========================================= */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    /* Header Mobile */
+    header {
+        min-height: 60vh; 
+    }
+    .portfolio-title h1 {
+        font-size: 2.5em; 
+    }
+    .header-content {
+        flex-direction: column; 
+        text-align: center;
+        gap: 15px;
+    }
+    .main-nav {
+        order: 2; 
+        width: 100%;
+        margin-top: 10px;
+    }
+    .main-nav a {
+        margin: 5px 8px;
+        font-size: 0.9em;
+    }
+    .language-switcher {
+        order: 1; 
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+
+    /* Sobre Mim Mobile */
+    .about-section {
+        flex-direction: column; 
+        gap: 30px;
+    }
+    .about-left {
+        flex: auto; 
+        width: 100%;
+    }
+    .contact-info, .skills-section {
+        text-align: center; 
+    }
+    .skills-icones {
+        justify-content: center; 
+    }
+    .skill-item {
+        width: 60px; 
+    }
+    .about-right h2 {
+        text-align: center; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    h2 { 
+        font-size: 1.5em;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .foto-perfil {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 25px;
+        border: 3px solid #007bff; 
+    }
+
+    /* Projetos e Certificações Mobile */
+    .grid-projetos, #certificacoes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .links a {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .imagem-projeto {
+        height: 180px; 
+    }
+
+    /* Rodapé Mobile */
+    .links-sociais.icon-links {
+        gap: 15px;
+    }
+    .links-sociais.icon-links img {
+        width: 35px; 
+        height: 35px;
+    }
+}
