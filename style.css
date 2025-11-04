@@ -639,4 +639,98 @@ footer {
         width: 35px; 
         height: 35px;
     }
+
+}
+/* ========================================= */
+/* MEDIA QUERIES (RESPONSIVIDADE) */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Ajuste do Container Principal */
+    .container {
+        padding: 10px; /* Reduz o padding para ganhar mais espaço */
+    }
+
+    /* 2. Ajuste do Header e Navegação */
+    .header-content {
+        flex-direction: column; /* Empilha os itens do header */
+        text-align: center;
+    }
+    
+    .portfolio-title {
+        margin-bottom: 20px;
+    }
+
+    .portfolio-title h1 {
+        font-size: 2.5em; /* Reduz o tamanho da fonte do título principal */
+    }
+
+    .main-nav {
+        flex-direction: column; /* Empilha os links da navegação */
+        margin-bottom: 20px;
+    }
+
+    .main-nav a {
+        margin: 5px 0; /* Espaço entre os links empilhados */
+    }
+    
+    .language-switcher {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    /* 3. Ajuste da Seção 'Sobre Mim' (Principal mudança) */
+    .about-section {
+        flex-direction: column; /* A coluna da esquerda (foto/skills) vai para cima */
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    .about-left {
+        flex: auto; /* Permite que o lado esquerdo ocupe a largura total */
+        width: 100%;
+    }
+    
+    .foto-perfil {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .contact-info {
+        text-align: center; /* Centraliza as informações de contato */
+    }
+
+    /* 4. Ajuste da Seção 'Skills' */
+    .skills-section {
+        text-align: center; /* Centraliza o título "Skills" */
+    }
+    
+    .skills-icones {
+        justify-content: center; /* Centraliza os ícones */
+    }
+
+    /* 5. Ajuste da Seção 'Projetos' */
+    .grid-projetos {
+        grid-template-columns: 1fr; /* Muda de 2 para 1 coluna */
+        gap: 20px;
+    }
+    
+    .projeto-card .imagem-projeto {
+        height: 200px; /* Garante que a imagem do projeto não fique muito alta */
+    }
+
+    /* 6. Ajuste de Certificações e Recomendações */
+    .certificado-item {
+        flex-direction: column; /* Empilha o ícone e a info do certificado */
+        text-align: center;
+    }
+    
+    .certificado-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .recomendacao-item {
+        padding: 15px;
+    }
 }
